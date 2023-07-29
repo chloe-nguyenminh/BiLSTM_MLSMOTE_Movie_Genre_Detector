@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>LearnAI Movie Detector Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpg" alt="logo" class="logo_img"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="model1.html">MODEL 1</a></li>
+                    <li><a href="model2.html">MODEL 2</a></li>
+                    <li><a href="model3.html">MODEL 3</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+    <div class="text-box">
+        <h1>About Us</h1>
+        <!-- add line break if needed -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis pharetra lorem vel gravida. Nunc dapibus ultricies nisl non elementum. <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros mi, mollis sed lorem at, finibus posuere urna. <br> Etiam ut ex tellus. Duis et gravida mauris.</p>
+        <a href="index.html#explore_models_id" class="banner-btn">Back to Our Models</a>
+    </div>
+
+    </section>
+
+
+<!-- File Upload Section -->
+
+<!-- Footer -->
+
+<section class="footer">
+    <h4>Acknowledgements</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis pharetra lorem vel gravida. Nunc dapibus ultricies nisl non elementum. <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros mi, mollis sed lorem at, finibus posuere urna. <br> Etiam ut ex tellus. Duis et gravida mauris.</p>
+    <div class="icons">
+        <a href="https://www.uoft.ai" target=”_blank”><i class="fa fa-university"></i></a>
+        <a href="https://github.com/chloe-nguyenminh/Movie_Genre_Detector_Project" target=”_blank”><i class="fa fa-github"></i></a>
+        <a href=""><i class="fa fa-envelope" target=”_blank”></i></a>
+    </div>
+    <p>LearnAI 2022-2023. University of Toronto.</p>
+</section>
+
+<!-- Javascript (Mobile version toggle menu) -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
