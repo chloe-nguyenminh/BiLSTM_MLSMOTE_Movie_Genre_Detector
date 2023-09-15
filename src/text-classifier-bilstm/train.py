@@ -85,7 +85,7 @@ def main():
                         default=0.2)
     parser.add_argument('--epochs', type=int, metavar='int', required=False, help="Number of epochs", default=10)
     parser.add_argument('--model_file', type=str, metavar='str', required=False, help='File to save model weights to.',
-                        default='bilstm.pth')
+                        default='text-classifier-bilstm.pth')
 
     args = vars(parser.parse_args())
 

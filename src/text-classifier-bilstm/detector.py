@@ -48,7 +48,7 @@ def main():
     parser.add_argument('--title', type=str, metavar='str', required=True, help="Title of the movie")
     parser.add_argument('--description', type=str, metavar='str', required=True, help="Overview of the movie")
     parser.add_argument('--modelpath', type=str, metavar='path', required=False,
-                        help='Path to the saved model weights.', default='bilstm.pth')
+                        help='Path to the saved model weights.', default='text-classifier-bilstm.pth')
 
     args = vars(parser.parse_args())
 
