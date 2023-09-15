@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1286dc-f33e-4b10-b4a3-088a4ba29efb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LSTM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_preprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/detector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bilstm/LSTM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bilstm/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bilstm/data_preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bilstm/detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bilstm/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +28,11 @@
     <setting file="file://$PROJECT_DIR$/../../code_snippet/BiLSTM-movie-title-sypnosis-classification.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../code_snippet/MLSMOTE-movie-genre-image-classifier.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/LSTM.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/data_loader.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/data_preprocessing.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/detector.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/train.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/bilstm/LSTM.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/bilstm/data_loader.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/bilstm/data_preprocessing.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/bilstm/detector.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/bilstm/train.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,6 +64,8 @@
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src\bilstm" />
+      <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\bilstm" />
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src" />
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\notebooks" />
     </key>
