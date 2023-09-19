@@ -98,7 +98,7 @@ class MLSMOTE:
                 except Exception as e:
                     print('Error', e)
 
-    def config_Dask_CUDA(self) -> None:
+    def _config_Dask_CUDA(self) -> None:
         """
         TODO: consider moving to new module for scaling
         """
@@ -109,6 +109,23 @@ class MLSMOTE:
         os.environ["DASK_UCX__INFINIBAND"] = "True"
         os.environ["DASK_UCX__NET_DEVICES"] = "ib0"
 
+    def distribute_data(self, client, np_array, n_workers=None, partitions_per_worker=1):
+        # Get workers on cluster
+        workers = list(client.has_what().keys())
+        # Select n_workers number of workers
+        if n_workers:
+            workers = workers[:n_workers]
+        # Find number of partitions
+        n_partitions = partitions_per_worker * len(workers)
+        # From host to device
+        cp_array = cp.array(np_array)
+        # From cuPy array to cuDF Dataframe
+        cudf_df = DataFrame(cp_array)
+        # From cuDF Dataframe to distributed Dask Dataframe
+        dask_cudf_df = dask_cudf.from_cudf(cudf_df, npartitions=n_partitions)
+        dask_cudf_df, = persist_across_workers(client, [dask_cudf_df], workers=workers)
+        wait(dask_cudf_df)
+        return dask_cudf_df
     def nearest_neighbor(self, X: np.array) -> list:
         """
         Give index of 5 nearest neighbor of all the instances
@@ -116,6 +133,10 @@ class MLSMOTE:
         : return indices: list of list, index of 5 nearest neighbor of each
         element in X
         """
+        # TODO: scale to distributed client for better performance
+        nbs=NearestNeighbors(n_neighbors=5,metric='euclidean',algorithm='kd_tree').fit(X)
+        euclidean, indices = nbs.kneighbors(X)
+        return indices
 
 
     def MLSMOTE(self) -> [pd.DataFrame, pd.DataFrame]:
@@ -124,24 +145,24 @@ class MLSMOTE:
         : return new_X: pd.DataFrame, augmented feature vector data
         : target: pd.FataFrame, augmented target vector data
         """
-        indices2 = nearest_neighbour(X)
+        indices2 = self.nearest_neighbor(self.feature_df)
         n = len(indices2)
-        new_X = np.zeros((self.num_sample, X.shape[1]))
-        target = np.zeros((n_sample, y.shape[1]))
-        for i in range(n_sample):
+        new_X = np.zeros((self.num_sample, self.target_df.shape[1]))
+        target = np.zeros((self.num_sample, self.target_df.shape[1]))
+        for i in range(self.num_sample):
             reference = random.randint(0,n-1)
             neighbour = random.choice(indices2[reference,1:])
             all_point = indices2[reference]
-            nn_df = y[y.index.isin(all_point)]
+            nn_df = self.target_df[self.target_df.index.isin(all_point)]
             ser = nn_df.sum(axis = 0, skipna = True)
             target[i] = np.array([1 if val>2 else 0 for val in ser])
             ratio = random.random()
-            gap = X.loc[reference,:] - X.loc[neighbour,:]
-            new_X[i] = np.array(X.loc[reference,:] + ratio * gap)
-        new_X = pd.DataFrame(new_X, columns=X.columns)
-        target = pd.DataFrame(target, columns=y.columns)
-        new_X = pd.concat([X, new_X], axis=0)
-        target = pd.concat([y, target], axis=0)
+            gap = self.feature_df.loc[reference,:] - self.feature_df.loc[neighbour,:]
+            new_X[i] = np.array(self.feature_df.loc[reference,:] + ratio * gap)
+        new_X = pd.DataFrame(new_X, columns=self.feature_df.columns)
+        target = pd.DataFrame(target, columns=self.target_df.columns)
+        new_X = pd.concat([self.feature_df, new_X], axis=0)
+        target = pd.concat([self.feature_df, target], axis=0)
         return new_X, target
 
 def main():
@@ -162,6 +183,7 @@ def main():
     # Connect to a cluster through a Dask client
     client = Client(scheduler_file='dask-scheduler.json')
     X_cudf = cudf.DataFrame(mlsmote_X_Train)
+
 
 
 
