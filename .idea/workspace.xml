@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1286dc-f33e-4b10-b4a3-088a4ba29efb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LSTM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_preprocessing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/detector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image-classifier-mlsmote/cv-mlsmote.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/image-classifier-mlsmote/cv-mlsmote.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image-classifier-mlsmote/data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/image-classifier-mlsmote/data_preprocessing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +25,13 @@
     <setting file="file://$PROJECT_DIR$/../../code_snippet/BiLSTM-movie-title-sypnosis-classification.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../code_snippet/MLSMOTE-movie-genre-image-classifier.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/LSTM.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/data_loader.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/data_preprocessing.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/detector.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/train.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/image-classifier-mlsmote/cv-mlsmote.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/image-classifier-mlsmote/data_loader.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/LSTM.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/data_loader.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/data_preprocessing.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/detector.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/train.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,28 +42,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/chloe_nguyen/PycharmProjects/movie_genre_detector_project/Movie_Genre_Detector_Project/src",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chloe_nguyen/PycharmProjects/movie_genre_detector_project/Movie_Genre_Detector_Project/src/image-classifier-mlsmote&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src\image-classifier-mlsmote" />
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src" />
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src" />
+      <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src\bilstm" />
+      <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\bilstm" />
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\notebooks" />
     </key>
   </component>
