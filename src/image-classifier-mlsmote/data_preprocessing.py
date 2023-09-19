@@ -1,4 +1,3 @@
-from typing import Protocol
 import pandas as pd
 import numpy as np
 import sys
@@ -9,20 +8,24 @@ from PIL import Image
 from keras.utils import load_img, img_to_array
 import glob
 from npy_append_array import NpyAppendArray
-import csv
 
 pd.set_option('display.max_colwidth', None)
 np.set_printoptions(threshold=sys.maxsize)
 
 
 class DataProcessor:
+    # TODO: generalize inputs to be optional
     def __init__(self,
-                 org_data_path: str | None,
+                 org_data_path: str,
                  encoded_df_path: str,
                  labels_path: str,
                  train_dataset_path: str,
                  validation_dataset_path: str,
-                 test_dataset_path: str) -> None:
+                 test_dataset_path: str,
+                 x_train_path: str,
+                 y_train_path: str,
+                 x_validation_path: str,
+                 y_validation_path: str) -> None:
         self.df = pd.read_csv(org_data_path, encoding='ISO-8859-1')
         self.accurate_id = []
         self.genre_dict = {}
@@ -32,10 +35,16 @@ class DataProcessor:
         self.df = self.df.drop(columns=['imdbId'])
         self.df.insert(1, 'imdbId', np.array(self.accurate_id))
         self.build_multi_hot_encoded_data(encoded_df_path, labels_path)
-        self.split_train_valid(encoded_df_path, train_dataset_path,
+        self.split_train_valid(encoded_df_path,
+                               train_dataset_path,
                                validation_dataset_path,
                                test_dataset_path)
-        self.save_train_valid_df(train_dataset_path, validation_dataset_path)
+        self.save_train_valid_df(train_dataset_path,
+                                 validation_dataset_path,
+                                 x_train_path,
+                                 y_train_path,
+                                 x_validation_path,
+                                 y_validation_path)
 
     def remove_broken_link(self) -> None:
         self.df = self.df.dropna(how='any')
