@@ -23,7 +23,7 @@ class DataLoader(object):
                                'Mystery', 'War', 'Foreign', 'Music', 'Documentary',
                                'Western', 'TV Movie']
 
-    def _download_data(self, ):
+    def _download_data(self):
         """
         Function to download the moviefone dataset and extract movies_metadata.csv file.
         :return: NA

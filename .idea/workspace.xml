@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1286dc-f33e-4b10-b4a3-088a4ba29efb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bilstm/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/text-classifier-bilstm/LSTM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bilstm/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/text-classifier-bilstm/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bilstm/data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/text-classifier-bilstm/data_preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bilstm/detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/text-classifier-bilstm/detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bilstm/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/text-classifier-bilstm/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image-classifier-mlsmote/cv-mlsmote.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image-classifier-mlsmote/data_loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image-classifier-mlsmote/data_preprocessing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image-classifier-mlsmote/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/text-classifier-bilstm/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/text-classifier-bilstm/data_loader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,8 @@
     <setting file="file://$PROJECT_DIR$/../../code_snippet/BiLSTM-movie-title-sypnosis-classification.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../code_snippet/MLSMOTE-movie-genre-image-classifier.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/image-classifier-mlsmote/cv-mlsmote.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/image-classifier-mlsmote/data_loader.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/LSTM.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/data_loader.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/text-classifier-bilstm/data_preprocessing.py" root0="SKIP_INSPECTION" />
@@ -48,8 +50,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/chloe_nguyen/PycharmProjects/movie_genre_detector_project/Movie_Genre_Detector_Project/src",
+    "last_opened_file_path": "C:/Users/chloe_nguyen/PycharmProjects/movie_genre_detector_project/Movie_Genre_Detector_Project/src/image-classifier-mlsmote",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
   "keyToStringList": {
@@ -60,6 +61,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src\image-classifier-mlsmote" />
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\src" />
       <recent name="C:\Users\chloe_nguyen\PycharmProjects\movie_genre_detector_project\Movie_Genre_Detector_Project\scripts" />
     </key>
