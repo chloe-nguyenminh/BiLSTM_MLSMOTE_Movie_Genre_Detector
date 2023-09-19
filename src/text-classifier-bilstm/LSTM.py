@@ -35,7 +35,7 @@ class LSTM(nn.Module):
 
 class BiLSTM(nn.Module):
     """
-    Implementation of a BiLSTM modul, with a fully connected layer at the end.
+    Implementation of a BiLSTM module, with a fully connected layer at the end.
     """
     def __init__(self, embedding_dim, hidden_dim, label_size, batch_size, embedding_weights, dropout=0.2):
         super(BiLSTM, self).__init__()
